@@ -33,7 +33,7 @@ class MessageService {
 
         const list = this.messageRepository.find({
             where: { user_id },
-            relations: ["User"]
+            relations: ["user"]
         });
 
         return list;

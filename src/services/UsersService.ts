@@ -28,9 +28,7 @@ class UsersService{
     }
 
     async findByEmail(email: string) {
-        const user = await (await connection).getCustomRepository(UsersRepository)
-                                .findOne({ email } as any);
-    
+        const user = await this.usersRepository.findOne({ email });
         return user;
       }
 }
